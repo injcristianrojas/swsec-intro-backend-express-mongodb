@@ -19,7 +19,6 @@ async function client() {
 async function startDB() {
   const db = await client();
   db.dropDatabase();
-
   db.collection(USERSTABLE).insertMany([
     { username: "zorzal", password: "fio", type: 2 },
     { username: "admin", password: "dt356wss212l", type: 1 },
@@ -64,4 +63,4 @@ async function addMessage(message) {
   await db.collection(MESSAGESTABLE).insertOne({message: message});
 }
 
-export { client as default, startDB, getMessages, loginQuery, getUsersByTypeV1, getUsersByTypeV2, addMessage, DBNAME, USERSTABLE, MESSAGESTABLE };
+export { client as default, startDB, getMessages, loginQuery, getUsersByTypeV1, getUsersByTypeV2, addMessage };
