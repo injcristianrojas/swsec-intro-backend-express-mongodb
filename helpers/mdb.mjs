@@ -9,10 +9,14 @@ async function client() {
     const client = new MongoClient("mongodb://localhost:27017/");
     await client.connect();
     const db = client.db(DBNAME);
+    const res = await db.admin().ping();
     return db;
   } catch (err) {
-    console.error(err);
-    throw err;
+    if (err.message.includes('ECONNREFUSED'))
+      console.error('Launch the MongoDB server first: docker compose up --build');
+    else
+      console.error(err.message);
+    return;
   }
 }
 
