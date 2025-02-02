@@ -1,5 +1,5 @@
 services:
   mongodb:
-    image: "mongo:5-focal"
+    image: "docker.io/library/mongo:5-focal"
     ports:
       - "27017:27017"
