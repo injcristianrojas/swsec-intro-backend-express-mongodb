@@ -11,7 +11,8 @@ docker compose up --build
 # Launch
 
 Node version lts/gallium is recommended. This project uses
-[nvm](https://github.com/nvm-sh/nvm) for environment control. If you use it,
+[nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
+for environment control. If you use it,
 load it using `nvm use`, then run using:
 
 ```shell
