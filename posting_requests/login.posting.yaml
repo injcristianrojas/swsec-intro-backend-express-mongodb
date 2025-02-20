@@ -1,0 +1,13 @@
+name: Login
+method: POST
+url: http://127.0.0.1:9000/api/v2/login
+body:
+  content: |-
+    {
+      "username": "loica",
+      "password": "123"
+    }
+  content_type: application/json
+headers:
+- name: content-type
+  value: application/json
